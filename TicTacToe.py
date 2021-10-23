@@ -48,8 +48,31 @@ for i in range(9):
         else:
             break
     theBoard[move] = turn
-    if theBoard["topL"]:
-        print("The" + turn + "won. Congratulations!")
+    if (theBoard["topL"] == turn
+            and theBoard["topM"] == turn        # first case
+            and theBoard["topR"] == turn)\
+            or (theBoard["midL"] == turn        # second case
+                and theBoard["midM"] == turn
+                and theBoard["midR"] == turn)\
+            or (theBoard["botL"] == turn        # third case
+                and theBoard["botM"] == turn
+                and theBoard["botR"] == turn) \
+            or (theBoard["topL"] == turn        # fourth case
+                and theBoard["midL"] == turn
+                and theBoard["botL"] == turn)\
+            or (theBoard["topM"] == turn        # fifth case
+                and theBoard["midM"] == turn
+                and theBoard["botM"] == turn)\
+            or (theBoard["topR"] == turn        # sixth case
+                and theBoard["midR"] == turn
+                and theBoard["botR"] == turn)\
+            or (theBoard["topL"] == turn        # seventh case
+                and theBoard["midM"] == turn
+                and theBoard["botR"] == turn)\
+            or (theBoard["topR"] == turn        # eighth case
+                and theBoard["midM"] == turn
+                and theBoard["botL"] == turn):
+        print("The " + turn + " won. Congratulations!")
         break
     if turn == "X":
         turn = "O"
