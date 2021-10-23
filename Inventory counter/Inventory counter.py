@@ -1,6 +1,3 @@
-# stuff = {"chain": 1, "big dick": 0, "arrow": 5}
-#
-#
 def display_inventory(inventory):
     print("Inventory")
     item_total = 0
