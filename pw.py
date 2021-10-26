@@ -1,7 +1,7 @@
+#! python3
+
 import sys, pyperclip
 
-
-# python3
 # pw.py - программа для незащищённого хранения паролей
 passwords = {'email': 'F302hjf8hkKFi2', 'blog': 'vkq20kML2k', 'luggage': '1245'}
 
